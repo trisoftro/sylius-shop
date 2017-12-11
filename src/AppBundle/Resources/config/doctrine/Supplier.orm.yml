@@ -1,0 +1,19 @@
+AppBundle\Entity\Supplier:
+    type: entity
+    table: supplier
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        code:
+            type: string
+            unique: true
+        name:
+            type: string
+        state:
+            type: string
+        email:
+            type: string

@@ -1,1 +1,4 @@
-services: ~
+services:
+    app.sender.trust_supplier_email:
+        class: AppBundle\Sender\TrustSupplierEmailSender
+        arguments: ['@sylius.email_sender']

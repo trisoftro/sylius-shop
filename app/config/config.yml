@@ -10,6 +10,10 @@ imports:
     - { resource: "parameters.yml" }
     - { resource: "security.yml" }
 
+    - { resource: 'bundles/sylius_resource.yml' }
+    - { resource: 'bundles/sylius_grid.yml' }
+    - { resource: 'bundles/winzou_state_machine.yml' }
+
 parameters:
     locale: en_US
 
@@ -62,3 +66,12 @@ fos_rest:
         rules:
             - { path: '^/api', priorities: ['json', 'xml'], fallback_format: json, prefer_extension: true }
             - { path: '^/', stop: true }
+
+sylius_mailer:
+    sender:
+        name: Trisoft
+        address: spam@trisoft.ro
+    emails:
+        supplier_trusted:
+            subject: You've been trusted!
+            template: AppBundle:Email:trustedSupplier.html.twig
