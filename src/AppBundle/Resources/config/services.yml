@@ -2,3 +2,14 @@ services:
     app.sender.trust_supplier_email:
         class: AppBundle\Sender\TrustSupplierEmailSender
         arguments: ['@sylius.email_sender']
+
+    app.order_processor.heavy_order:
+        class: AppBundle\OrderProcessor\HeavyOrderProcessor
+        arguments: ['@sylius.factory.adjustment']
+        tags:
+            - { name: sylius.order_processor, priority: 0 }
+
+    sylius.order_processing.order_adjustments_clearer:
+        class: AppBundle\OrderProcessor\OrderAdjustmentsClearer
+        tags:
+            - { name: sylius.order_processor, priority: 1024 }
