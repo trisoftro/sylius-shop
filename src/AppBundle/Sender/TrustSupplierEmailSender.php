@@ -21,7 +21,7 @@ final class TrustSupplierEmailSender
 
     public function sendTrustEmail(Supplier $supplier)
     {
-        $this->sender->send('sender_trusted', [$supplier->getEmail()], [
+        $this->sender->send('supplier_trusted', [$supplier->getEmail()], [
             'supplier' => $supplier->getName()
         ]);
     }
