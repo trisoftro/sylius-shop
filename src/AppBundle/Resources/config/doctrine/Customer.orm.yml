@@ -1,0 +1,9 @@
+AppBundle\Entity\Customer:
+    type: entity
+    table: customer
+    fields:
+        taxNumber:
+            type: string
+            column_name: tax_number
+            nullable: true
+            unique: true
