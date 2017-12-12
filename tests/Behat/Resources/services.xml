@@ -7,7 +7,16 @@
     <services>
         <service id="app.behat.context.managing_customers" class="Tests\AppBundle\Behat\Context\ManagingCustomersContext">
             <argument type="service" id="app.behat.page.customer_create"/>
+            <argument type="service" id="sylius.behat.page.admin.customer.index"/>
             <tag name="fob.context_service" />
+        </service>
+
+        <service
+            id="app.behat.context.customer_setup"
+            class="Tests\AppBundle\Behat\Context\CustomerSetupContext"
+        >
+            <argument type="service" id="__symfony__.sylius.manager.customer"/>
+            <tag name="fob.context_service"/>
         </service>
 
         <service

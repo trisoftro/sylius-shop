@@ -7,9 +7,10 @@ Feature: Browsing customers with tax numbers
     Background:
         Given the store has customer "info2@trisoft.ro"
         And the store has customer "info@trisoft.ro"
-        And the customer "info@trisoft.ro" has the tax number "123456"
+        And the customer has the tax number "123456"
         And I am logged in as an administrator
 
+    @ui
     Scenario: Browsing customers with tax numbers
         When I want to see all customers in store
         Then I should see 2 customers in the list

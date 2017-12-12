@@ -36,3 +36,10 @@ sylius_grid:
                             class: green
                             transition: trust
                             graph: app_supplier
+
+        sylius_admin_customer:
+            fields:
+                taxNumber:
+                    type: string
+                    label: Tax number
+                    sortable: ~
