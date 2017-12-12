@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="app.behat.context.managing_customers" class="Tests\AppBundle\Behat\Context\ManagingCustomersContext">
+            <argument type="service" id="app.behat.page.customer_create"/>
+            <tag name="fob.context_service" />
+        </service>
+
+        <service
+                id="app.behat.page.customer_create"
+                class="Tests\AppBundle\Behat\Page\CustomerCreatePage"
+                parent="sylius.behat.page.admin.customer.create"
+                public="false"
+        />
+    </services>
+</container>

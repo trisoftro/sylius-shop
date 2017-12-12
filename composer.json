@@ -71,6 +71,11 @@
         },
         "classmap": ["app/AppKernel.php", "app/AppCache.php"]
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\AppBundle\\": "tests/"
+        }
+    },
     "config": {
         "bin-dir": "bin"
     },
