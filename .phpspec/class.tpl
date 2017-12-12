@@ -1,10 +1,7 @@
 <?php
 
-declare(strict_type=1);
-
-namespace %namespace%;
+declare(strict_types=1);%namespace_block%
 
 class %name%
 {
-
 }
