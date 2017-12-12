@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "60bc30be1ba5fdab52c9235c6603e7b4",
+    "content-hash": "577a1424c55e6586564ee298eaf83e7d",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -5808,6 +5808,55 @@
             "time": "2017-11-16T18:15:01+00:00"
         },
         {
+            "name": "tss/automailer-bundle",
+            "version": "dev-master",
+            "target-dir": "TSS/AutomailerBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/radutopala/TSSAutomailerBundle.git",
+                "reference": "1d167d1c00da794e5844159c66fe8d32b56ea7d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/radutopala/TSSAutomailerBundle/zipball/1d167d1c00da794e5844159c66fe8d32b56ea7d3",
+                "reference": "1d167d1c00da794e5844159c66fe8d32b56ea7d3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1",
+                "swiftmailer/swiftmailer": "^6.0",
+                "symfony/swiftmailer-bundle": "^2.8|^3"
+            },
+            "suggest": {
+                "beanstalkd-binary": "http://kr.github.com/beanstalkd/",
+                "leezy/pheanstalk-bundle": "Allows integration with beanstalk queue, through internal BeanstalkPlugin"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "TSS\\AutomailerBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Radu Topala",
+                    "email": "radu.topala@trisoft.ro"
+                }
+            ],
+            "description": "Adds Doctrine spool to Swiftmailer",
+            "keywords": [
+                "automailer",
+                "spool",
+                "swift",
+                "swiftmailer"
+            ],
+            "time": "2017-12-11T13:08:40+00:00"
+        },
+        {
             "name": "twig/extensions",
             "version": "v1.5.1",
             "source": {
@@ -9223,7 +9272,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "tss/automailer-bundle": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

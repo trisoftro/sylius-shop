@@ -36,3 +36,22 @@ sylius_grid:
                             class: green
                             transition: trust
                             graph: app_supplier
+        app_admin_automailer:
+                    driver:
+                        name: doctrine/orm
+                        options:
+                            class: AppBundle\Entity\Automailer
+                    fields:
+                        fromEmail:
+                            type: string
+                        toEmail:
+                            type: string
+                    actions:
+                        main:
+                            create:
+                                type: create
+                        item:
+                            update:
+                                type: update
+                            delete:
+                                type: delete

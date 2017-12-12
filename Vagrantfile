@@ -11,6 +11,7 @@ Vagrant.configure("2") do |config|
         _config.vm.hostname = "sylius"
 
         _config.vm.synced_folder ".", "/var/www", :nfs => true
+        _config.vm.synced_folder "~/.composer", "/home/vagrant/.composer", :nfs => true
 
         _config.vm.provision "file", source: "~/.ssh/id_rsa", destination: "~/.ssh/id_rsa"
         _config.vm.provision "file", source: "~/.gitconfig", destination: "~/.gitconfig"

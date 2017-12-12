@@ -3,3 +3,6 @@ sylius_resource:
         app.supplier:
             classes:
                 model: AppBundle\Entity\Supplier
+        app.automailer:
+            classes:
+                model: AppBundle\Entity\Automailer

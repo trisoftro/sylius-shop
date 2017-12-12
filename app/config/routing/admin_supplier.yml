@@ -7,6 +7,15 @@ app_supplier:
         grid: app_admin_supplier
     type: sylius.resource
 
+app_automailer:
+    resource: |
+        alias: app.automailer
+        except: ['show']
+        templates: SyliusAdminBundle:Crud
+        section: admin
+        grid: app_admin_automailer
+    type: sylius.resource
+
 app_admin_supplier_trust:
     path: /suppliers/{id}/trust
     methods: [PUT]

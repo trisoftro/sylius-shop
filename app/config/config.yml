@@ -55,7 +55,7 @@ swiftmailer:
     port: "%mailer_port%"
     username: "%mailer_user%"
     password: "%mailer_password%"
-    spool: { type: memory }
+    spool: { type: automailer }
 
 fos_rest:
     exception: ~
@@ -77,3 +77,7 @@ sylius_mailer:
         supplier_trusted:
             subject: You've been trusted!
             template: AppBundle:Email:trustedSupplier.html.twig
+
+tss_automailer:
+    class: AppBundle\Entity\Automailer
+    disable_default_entity: true
