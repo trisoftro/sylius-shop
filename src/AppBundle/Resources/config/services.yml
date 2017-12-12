@@ -13,3 +13,12 @@ services:
         class: AppBundle\OrderProcessor\OrderAdjustmentsClearer
         tags:
             - { name: sylius.order_processor, priority: 1024 }
+
+    app.provider.fake_tax_number_provider:
+        class: AppBundle\Provider\FakeTaxNumberProvider
+
+    app.assigner.customer_tax_number_assigner:
+        class: AppBundle\Assigner\CustomerTaxNumberAssigner
+        arguments:
+            - "@app.provider.fake_tax_number_provider"
+            - "@sylius.repository.customer"
