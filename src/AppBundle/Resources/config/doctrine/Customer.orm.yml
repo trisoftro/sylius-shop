@@ -1,6 +1,6 @@
 AppBundle\Entity\Customer:
     type: entity
-    table: customer
+    table: sylius_customer
     fields:
         taxNumber:
             type: string

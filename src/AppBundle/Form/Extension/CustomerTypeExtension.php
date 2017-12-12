@@ -14,7 +14,7 @@ final class CustomerTypeExtension extends AbstractTypeExtension
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('taxNumber', TextType::class, [
-            'label' => 'Tax Number'
+            'label' => 'Tax number'
         ]);
     }
 

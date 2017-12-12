@@ -10,6 +10,6 @@ final class CustomerCreatePage extends CreatePage
 {
     public function specifyByTaxNumber(string $taxNumber): void
     {
-        $this->getDocument()->fillField('Tax Number', '123456');
+        $this->getDocument()->fillField('Tax number', '123456');
     }
 }

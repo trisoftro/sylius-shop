@@ -13,6 +13,7 @@ imports:
     - { resource: 'bundles/sylius_resource.yml' }
     - { resource: 'bundles/sylius_grid.yml' }
     - { resource: 'bundles/winzou_state_machine.yml' }
+    - { resource: 'bundles/sylius_customer.yml' }
 
 parameters:
     locale: en_US

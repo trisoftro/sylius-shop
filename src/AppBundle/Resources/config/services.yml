@@ -21,7 +21,7 @@ services:
         class: AppBundle\Assigner\CustomerTaxNumberAssigner
         arguments:
             - "@app.provider.fake_tax_number_provider"
-            - "@sylius.repository.customers"
+            - "@sylius.repository.customer"
 
     app.form.extension.customer:
         class: AppBundle\Form\Extension\CustomerTypeExtension
